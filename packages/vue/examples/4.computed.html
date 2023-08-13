@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="../../reactivity/dist/reactivity.global.js"></script>
+    <script>
+        const { ref,computed } = VueReactivity
+        const age = ref(38)
+        let myAge = computed(() => {
+            console.log('执行了');
+            return age.value + 20
+        })
+        console.log(myAge.value);
+        setTimeout(() => {
+            age.value = 18
+            
+            console.log(myAge.value);
+        },1000)
+        
+    </script>
+</body>
+
+</html>

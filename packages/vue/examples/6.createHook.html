@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="../../runtime-dom/dist/runtime-dom.global.js"></script>
+    <script>
+        const { onBeforeMount, onMounted, onBeforeUpdate, onUpdated, reactive, createApp, h,getCurrentInstance } = VueRunTimeDom
+        let App = {
+            setup() {
+                let state = reactive({
+                    age: 18,
+                    flag: true
+                })
+                setTimeout(() => {
+                    state.flag = false
+                }, 3000);
+                onMounted(() => {
+                    console.log('加载后');
+                    let instance = getCurrentInstance()
+                    console.log(instance);
+                })
+                onBeforeMount(() => {
+                    console.log('加载前');
+                })
+                setTimeout(() => {
+                    state.age = 38
+                }, 3000)
+                onBeforeUpdate(() => {
+                    console.log('更新前');
+                })
+                onUpdated(() => {
+                    console.log('更新后');
+                })
+                return () => {
+                    if (state.flag) {
+                        return h('div', { style: { color: 'red' } }, [
+                        h('div', { style: { color: 'red' } }, 'A'),
+                        h('div', { style: { color: 'red' } }, 'B'),
+                        h('div', { style: { color: 'red' } }, "C"),
+                        h('div', { style: { color: 'red' } }, 'E')
+
+                        ])
+                        
+                    } else {
+                        return h('div', { style: { color: 'red' } }, [
+                        h('div', { style: { color: 'red' } }, 'A'),
+                        h('div', { style: { color: 'red' } }, 'C'),
+                        h('div', { style: { color: 'yellow' } }, "G"),
+                        h('div', { style: { color: 'red' } }, 'E')
+
+                        ])
+                    }
+
+                }
+            }
+        }
+
+        createApp(App).mount('#app')
+    </script>
+</body>
+
+</html>

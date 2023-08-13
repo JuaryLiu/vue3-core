@@ -1,0 +1,22 @@
+// 位移运算符 判断是不是组件
+// 1<<1  向左移动一位 
+export const enum ShapeFlags { 
+    ELEMENT = 1,
+    FUNCTIONAL_COMPONENT = 1 << 1, //00000010  2
+    STATEFUL_COMPONENT = 1 << 2, //00000100  4
+    TEXT_CHILDREN = 1 << 3, //00001000  8
+    ARRAY_CHILDREN = 1 << 4,
+    SLOTS_CHILDREN = 1 << 5,
+    TELEPORT = 1 << 6,
+    SUSPENSE = 1 << 7,
+    COMPONENT_SHOULD_KEEP_ALIVE = 1 << 8,
+    COMPONENT_KEPT_ALIVE = 1 << 9,
+    COMPONENT = ShapeFlags.STATEFUL_COMPONENT | ShapeFlags.FUNCTIONAL_COMPONENT
+}
+
+/**
+ * 组件 COMPONENT
+    ShapeFlags.STATEFUL_COMPONENT：00000100
+    ShapeFlags.FUNCTIONAL_COMPONENT:00000010
+    COMPONENT = 00000100 | 00000010 => 00000110
+ */
