@@ -48,5 +48,5 @@
 ### 备注：
 
 - .ts就是摆设，本来是要定义类型的，所以创建的typescript，但是时间能力有限，就没定义类型，就是anyscript  0_0,莫要见怪，咱们主要看的是逻辑嘛，要是不会ts，或者不想定义类型的就用js文件也可以，要定义类型的也只能看源码了。 还有大部分的api没有完成，后续有时间都会陆续更新
-- 其中具体的操作，放到一个md文件中 [vue3]()
+- 其中具体的操作，放到一个md文件中 [vue3](https://github.com/JuaryLiu/vue3-core/blob/master/vue3-core.md)
 
