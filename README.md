@@ -27,7 +27,7 @@
   ```
 
 - ```js
-  yarn add typescript -D -W // 安装ts ，不用的可以不安装
+  yarn add typescript -D -W // 安装ts 
   
   npx tsc --init // 生成ts配置文件
   ```
@@ -47,7 +47,7 @@
 
 ### 备注：
 
-- .ts就是摆设，本来是要定义类型的，所以创建的typescript，但是时间能力有限，就没定义类型，就是anyscript  0_0,莫要见怪，咱们主要看的是逻辑嘛，要是不会ts，或者不想定义类型的就用js文件也可以，要定义类型的也只能看源码了。 还有大部分的api没有完成，后续有时间都会陆续更新
+- 一万个人有一万种ts写法，所以大家不必纠结去看我的ts或者源码的ts ，对于类型的定义我也有很多偷懒的地方，莫要见怪0.0 咱们主要看的是逻辑嘛，。 还有大部分的api没有完成，后续有时间都会陆续更新
 - 其中具体的操作，放到一个md文件中 [vue3](https://github.com/JuaryLiu/vue3-core/blob/master/vue3-core.md)
 - 因为我也是小白，所以思路基本都是跟着源码走的，希望大家能给我一个star，支持支持我这只小白
 - ![01CC7D21](https://github.com/JuaryLiu/vue3-core/assets/128942977/43ecec75-a342-4642-820c-5db442c65c0e)
